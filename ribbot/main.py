@@ -1,5 +1,7 @@
 import discord
 from discord_slash import SlashCommand
+import sys
+import os
 
 
 class MyClient(discord.Client):
@@ -18,5 +20,8 @@ slash = SlashCommand(client, sync_commands=True)
 async def ping(ctx):
     await ctx.send(f"Pong! ({round(client.latency * 1000)}ms)")
 
-
-client.run("RIBBOT_TOKEN")
+try:
+    client.run(os.environ["RIBBOT_TOKEN"])
+except KeyError:
+    print("Please set the environment variable RIBBOT_TOKEN.", file=sys.stderr)
+    sys.exit(2)
