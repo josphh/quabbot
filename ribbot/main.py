@@ -29,5 +29,6 @@ def launch():
         print("Please set the environment variable RIBBOT_TOKEN.", file=sys.stderr)
         sys.exit(2)
 
+
 if __name__ == "__main__":
     launch()
