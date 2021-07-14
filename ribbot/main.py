@@ -22,8 +22,12 @@ async def ping(ctx):
     await ctx.send(f"Pong! ({round(client.latency * 1000)}ms)")
 
 
-try:
-    client.run(os.environ["RIBBOT_TOKEN"])
-except KeyError:
-    print("Please set the environment variable RIBBOT_TOKEN.", file=sys.stderr)
-    sys.exit(2)
+def launch():
+    try:
+        client.run(os.environ["RIBBOT_TOKEN"])
+    except KeyError:
+        print("Please set the environment variable RIBBOT_TOKEN.", file=sys.stderr)
+        sys.exit(2)
+
+if __name__ == "__main__":
+    launch()
