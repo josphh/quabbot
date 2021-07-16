@@ -2,6 +2,12 @@
 
 <!--next-version-placeholder-->
 
+## v0.0.2 (2021-07-16)
+| Type | Change |
+| --- | --- |
+| :Speech_Balloon: | Rename to Quabbot (#11) :speech_balloon: :wrench: ([`020669c`](https://github.com/josphh/quabbot/commit/020669c6c5dd789f760e8ac9edf3f72bfc216386)) |
+| Other | Create ribbot/__init__.py  ([`35f14d1`](https://github.com/josphh/quabbot/commit/35f14d1d46de19145ef225b1f98dd0b14d2c0161))<br>Beautify 18a4f74417f21f607a4ee114d776868325bddb46 :art:  ([`3bbfc62`](https://github.com/josphh/quabbot/commit/3bbfc628f7d958e8fee3cba44e9da45038ccfc7d))<br>Install a console script :hammer: ([`18a4f74`](https://github.com/josphh/quabbot/commit/18a4f74417f21f607a4ee114d776868325bddb46))<br>Update issue templates ([`1d6d718`](https://github.com/josphh/quabbot/commit/1d6d71840316f8685dc62d11d554469a7d63d357))<br>Create CODE_OF_CONDUCT.md ([`5cae430`](https://github.com/josphh/quabbot/commit/5cae430e9d5892ca80c732a4755fe3728f539b5e))<br>Populate setup.py :green_heart: :hammer:  ([`9371705`](https://github.com/josphh/quabbot/commit/93717054a95ab54e0e75ffee08ff9f600c1f3aaa)) |
+
 ## v0.0.1 (2021-07-14)
 | Type | Change |
 | --- | --- |
