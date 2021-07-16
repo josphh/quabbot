@@ -29,7 +29,7 @@ setup(
     ],
     entry_points={
         "console_scripts": [
-            "ribbot=ribbot.main:launch",
+            "quabbot=quabbot.main:launch",
         ],
     },
 )
