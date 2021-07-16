@@ -2,6 +2,12 @@
 
 <!--next-version-placeholder-->
 
+## v0.1.0 (2021-07-16)
+| Type | Change |
+| --- | --- |
+| :Sparkles: | Display version number in status (#15) :sparkles: ([`2566240`](https://github.com/josphh/quabbot/commit/25662408823bbde1d60907475587a930e6919657)) |
+| Other | Beautify 25662408823bbde1d60907475587a930e6919657 :art:  ([`65ce902`](https://github.com/josphh/quabbot/commit/65ce902c96afbad1d075a4369d6c0842ebf76604))<br>Rename console script :adhesive_bandage:  ([`117d598`](https://github.com/josphh/quabbot/commit/117d598359c0544039e1336b8e968cbd4121980c)) |
+
 ## v0.0.2 (2021-07-16)
 | Type | Change |
 | --- | --- |
