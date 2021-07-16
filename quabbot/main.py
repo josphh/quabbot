@@ -26,7 +26,7 @@ def launch():
     try:
         client.run(os.environ["QUABBOT_TOKEN"])
     except KeyError:
-        print("Please set the environment variable RIBBOT_TOKEN.", file=sys.stderr)
+        print("Please set the environment variable QUABBOT_TOKEN.", file=sys.stderr)
         sys.exit(2)
 
 
