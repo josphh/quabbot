@@ -12,7 +12,7 @@ with open(path.join(here, "README.md"), encoding="utf-8") as readme:
 
 
 setup(
-    name="ribbot",
+    name="quabbot",
     version=__version__,
     description="The Discord Companion and RPG Bot",
     long_description=long_description,
