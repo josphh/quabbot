@@ -4,13 +4,16 @@ import sys
 import discord
 from discord_slash import SlashCommand
 
+from quabbot import __version__
+
 
 class MyClient(discord.Client):
     async def on_ready(self):
         print("Ready")
 
 
-client = MyClient()
+activity = discord.Game(name=f"v{__version__}")
+client = MyClient(activity=activity)
 slash = SlashCommand(client, sync_commands=True)
 
 
