@@ -12,15 +12,15 @@ with open(path.join(here, "README.md"), encoding="utf-8") as readme:
 
 
 setup(
-    name="ribbot",
+    name="quabbot",
     version=__version__,
     description="The Discord Companion and RPG Bot",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/josphh/ribbot",
+    url="https://github.com/josphh/quabbot",
     project_urls={
-        "Bug Reports": "https://github.com/josphh/ribbot/issues",
-        "Source": "https://github.com/josphh/ribbot",
+        "Bug Reports": "https://github.com/josphh/quabbot/issues",
+        "Source": "https://github.com/josphh/quabbot",
     },
     packages=find_packages(exclude=["docs", "tests"]),
     install_requires=[
