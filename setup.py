@@ -1,8 +1,7 @@
+import re
 from os import path
 
 from setuptools import find_packages, setup
-
-__version__ = "0.0.2"
 
 
 # Read long description from README.md
@@ -11,9 +10,16 @@ with open(path.join(here, "README.md"), encoding="utf-8") as readme:
     long_description = readme.read()
 
 
+# Read version from quabbot/__init__.py
+with open("quabbot/__init__.py", "r") as init_py:
+    version = re.search(
+        r'^__version__\s*=\s*[\'"]([^\'"]*)[\'"]', init_py.read(), re.MULTILINE
+    ).group(1)
+
+
 setup(
     name="quabbot",
-    version=__version__,
+    version=version,
     description="The Discord Companion and RPG Bot",
     long_description=long_description,
     long_description_content_type="text/markdown",
