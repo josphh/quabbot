@@ -32,10 +32,11 @@ async def ping(ctx):
     description="Adopt a Quib",
 )
 async def adopt(ctx):
-    open(f"./users/{ctx.author.id}.json", "w")
     if os.path.exists(f"./users/{ctx.author.id}.json"):
         await ctx.send('You may not adopt another Quib, as you already have one!')
-    
+    else:
+        open(f"./users/{ctx.author.id}.json", "w")
+
 
 def launch():
     try:
