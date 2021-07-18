@@ -39,6 +39,7 @@ async def adopt(ctx):
         with open(f"./quabbot/users/{ctx.author.id}.json", "w") as userFile:
             await ctx.send("Quib adopted!")
 
+
 @slash.slash(
     name="disown",
     description="Disown your Quib",
