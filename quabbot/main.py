@@ -1,6 +1,8 @@
 import os
 import sys
 
+import json
+
 import discord
 from discord_slash import SlashCommand
 
@@ -24,6 +26,16 @@ slash = SlashCommand(client, sync_commands=True)
 async def ping(ctx):
     await ctx.send(f"Pong! ({round(client.latency * 1000)}ms)")
 
+
+@slash.slash(
+    name="adopt",
+    description="Adopt a Quib",
+)
+async def adopt(ctx):
+    open(f"./users/{ctx.author.id}.json", "w")
+    if os.path.exists(f"./users{ctx.author.id}.json"):
+        await ctx.send('You may not adopt another Quib, as you already have one!')
+    
 
 def launch():
     try:
