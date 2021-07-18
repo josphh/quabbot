@@ -12,6 +12,7 @@ class MyClient(discord.Client):
     async def on_ready(self):
         print("Ready")
 
+os.makedirs("./quabbot/users", exist_ok=True)
 
 activity = discord.Game(name=f"v{__version__}")
 client = MyClient(activity=activity)
@@ -31,10 +32,10 @@ async def ping(ctx):
     description="Adopt a Quib",
 )
 async def adopt(ctx):
-    if os.path.exists(f"./users/{ctx.author.id}.json"):
+    if os.path.exists(f"./quabbot/users/{ctx.author.id}.json"):
         await ctx.send("You may not adopt another Quib, as you already have one!")
     else:
-        with open(f"./users/{ctx.author.id}.json", "w") as userFile:
+        with open(f"./quabbot/users/{ctx.author.id}.json", "w") as userFile:
             await ctx.send("Quib adopted!")
 
 
