@@ -2,6 +2,12 @@
 
 <!--next-version-placeholder-->
 
+## v0.2.0 (2021-07-18)
+| Type | Change |
+| --- | --- |
+| :Sparkles: | Create /adopt command (#18) :sparkles: ([`8ac6119`](https://github.com/josphh/quabbot/commit/8ac6119b1b97af6e5180e1052ef553cad32532ab)) |
+| Other | Beautify 8ac6119b1b97af6e5180e1052ef553cad32532ab :art:  ([`f722038`](https://github.com/josphh/quabbot/commit/f722038770de0230b1adf4a115f041959e6a46c3)) |
+
 ## v0.1.0 (2021-07-16)
 | Type | Change |
 | --- | --- |
