@@ -12,6 +12,7 @@ class MyClient(discord.Client):
     async def on_ready(self):
         print("Ready")
 
+os.makedirs("./quabbot/users", exist_ok=True)
 
 activity = discord.Game(name=f"v{__version__}")
 client = MyClient(activity=activity)
