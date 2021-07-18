@@ -35,8 +35,9 @@ async def adopt(ctx):
     if os.path.exists(f"./users/{ctx.author.id}.json"):
         await ctx.send('You may not adopt another Quib, as you already have one!')
     else:
-        open(f"./users/{ctx.author.id}.json", "w")
+        userFile = open(f"./users/{ctx.author.id}.json", "w")
         await ctx.send('Quib adopted!')
+        userFile.close()
 
 def launch():
     try:
