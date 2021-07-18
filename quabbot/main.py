@@ -1,7 +1,6 @@
+import json
 import os
 import sys
-
-import json
 
 import discord
 from discord_slash import SlashCommand
@@ -33,11 +32,12 @@ async def ping(ctx):
 )
 async def adopt(ctx):
     if os.path.exists(f"./users/{ctx.author.id}.json"):
-        await ctx.send('You may not adopt another Quib, as you already have one!')
+        await ctx.send("You may not adopt another Quib, as you already have one!")
     else:
         userFile = open(f"./users/{ctx.author.id}.json", "w")
-        await ctx.send('Quib adopted!')
+        await ctx.send("Quib adopted!")
         userFile.close()
+
 
 def launch():
     try:
