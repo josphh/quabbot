@@ -2,6 +2,12 @@
 
 <!--next-version-placeholder-->
 
+## v0.3.0 (2021-07-18)
+| Type | Change |
+| --- | --- |
+| :Sparkles: | Added /disown command :sparkles:  ([`52447d6`](https://github.com/josphh/quabbot/commit/52447d667543cf45d9311039faa9b3bc7159fbbe)) |
+| Other | Beautify be69f6933ffeff52694a31a8076fa3a403ea0fe0 :art:  ([`d29332c`](https://github.com/josphh/quabbot/commit/d29332c39a763aaf6059a564714af4b2d1d0ff50))<br>Merge pull request #20 from josphh/disown-quib ([`be69f69`](https://github.com/josphh/quabbot/commit/be69f6933ffeff52694a31a8076fa3a403ea0fe0)) |
+
 ## v0.2.1 (2021-07-18)
 | Type | Change |
 | --- | --- |
