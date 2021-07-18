@@ -36,7 +36,7 @@ async def adopt(ctx):
         await ctx.send('You may not adopt another Quib, as you already have one!')
     else:
         open(f"./users/{ctx.author.id}.json", "w")
-
+        await ctx.send('Quib adopted!')
 
 def launch():
     try:
