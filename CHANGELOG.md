@@ -2,6 +2,12 @@
 
 <!--next-version-placeholder-->
 
+## v0.2.1 (2021-07-18)
+| Type | Change |
+| --- | --- |
+| :Bug: | Added code to create users directory if it does not exist :bug:  ([`8f858b7`](https://github.com/josphh/quabbot/commit/8f858b76e12aeb7e9612a98f094d024b9c81691b))<br>Changed filepath to avoid NotADirectory error :bug:  ([`8b446d0`](https://github.com/josphh/quabbot/commit/8b446d0556ec85e07c7eb99d79204ba01b920dc1)) |
+| Other | Beautify 804f6b7151fb409f99ab6fb304e1e2a14a26b483 :art:  ([`68f7747`](https://github.com/josphh/quabbot/commit/68f7747d21cc6613bdf1ea50e3981340c56a5860))<br>Merge pull request #19 from josphh/directoryError-fix ([`804f6b7`](https://github.com/josphh/quabbot/commit/804f6b7151fb409f99ab6fb304e1e2a14a26b483))<br>Use a with statement to close the file :recycle:  ([`53aafdd`](https://github.com/josphh/quabbot/commit/53aafddc14d83226493ad39dbcb81b3a81d34a7b)) |
+
 ## v0.2.0 (2021-07-18)
 | Type | Change |
 | --- | --- |
