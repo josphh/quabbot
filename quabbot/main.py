@@ -1,5 +1,7 @@
 import os
 import sys
+import random
+import json
 
 import discord
 from discord_slash import SlashCommand
@@ -18,6 +20,16 @@ activity = discord.Game(name=f"v{__version__}")
 client = MyClient(activity=activity)
 slash = SlashCommand(client, sync_commands=True)
 
+CONSONANTS = "bcdfghjklmnpqrstvwxyz"
+VOWELS = "aeiou"
+
+def generate_name():
+    name = ""
+    for _ in range(random.randint(2, 5)):
+        name += random.choice(CONSONANTS)
+        name += random.choice(VOWELS) 
+    return name  
+
 
 @slash.slash(
     name="ping",
@@ -35,8 +47,10 @@ async def adopt(ctx):
     if os.path.exists(f"./quabbot/users/{ctx.author.id}.json"):
         await ctx.send("You may not adopt another Quib, as you already have one!")
     else:
-        with open(f"./quabbot/users/{ctx.author.id}.json", "w"):
-            await ctx.send("Quib adopted!")
+        with open(f"./quabbot/users/{ctx.author.id}.json", "w") as file:
+            name = generate_name()
+            json.dump({"name": name}, file)
+            await ctx.send(f"Quib adopted; Their name is {name}!")
 
 
 @slash.slash(
