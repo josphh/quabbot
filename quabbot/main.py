@@ -79,7 +79,7 @@ async def info(ctx):
             data = jsons.loads(file.read())
             name = data["name"]
             embed = discord.Embed(
-                title=name, description=data["timeCreated"].strftime("%m/%d/%Y")
+                title=name, description=data["timeCreated"].strftime("%d/%m/%Y")
             )
             embed.set_image(
                 url="https://raw.githubusercontent.com/josphh/quabbot/master/quabbot/resources/quib.png"
