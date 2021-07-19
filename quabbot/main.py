@@ -29,7 +29,7 @@ def generate_name():
     for _ in range(random.randint(2, 5)):
         name += random.choice(CONSONANTS)
         name += random.choice(VOWELS)
-    return name
+    return name.title()
 
 
 @slash.slash(
