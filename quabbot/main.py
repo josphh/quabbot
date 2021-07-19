@@ -51,7 +51,7 @@ async def adopt(ctx):
     else:
         with open(f"./quabbot/users/{ctx.author.id}.json", "w") as file:
             name = generate_name()
-            json.dump({"name": name, "timestamp": datetime.datetime.now()}, file)
+            jsons.dump({"name": name}, file)
             await ctx.send(f"Quib adopted; Their name is {name}!")
 
 
