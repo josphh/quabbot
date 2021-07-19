@@ -50,7 +50,7 @@ async def adopt(ctx):
         with open(f"./quabbot/users/{ctx.author.id}.json", "w") as file:
             name = genName()
             json.dump({"name": name}, file)
-            await ctx.send("Quib adopted!")
+            await ctx.send(f"Quib adopted; Their name is {name}!")
 
 
 @slash.slash(
