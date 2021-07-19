@@ -2,6 +2,11 @@
 
 <!--next-version-placeholder-->
 
+## v0.6.2 (2021-07-19)
+| Type | Change |
+| --- | --- |
+| :Speech_Balloon: | Informmation → information :pencil2: :speech_balloon: ([`f4a08b3`](https://github.com/josphh/quabbot/commit/f4a08b3e433fee15f335be2641e5860188dd29b1)) |
+
 ## v0.6.1 (2021-07-19)
 | Type | Change |
 | --- | --- |
