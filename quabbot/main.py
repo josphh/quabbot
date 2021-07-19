@@ -1,7 +1,7 @@
-import os
-import sys
-import random
 import json
+import os
+import random
+import sys
 
 import discord
 from discord_slash import SlashCommand
@@ -23,12 +23,13 @@ slash = SlashCommand(client, sync_commands=True)
 CONSONANTS = "bcdfghjklmnpqrstvwxyz"
 VOWELS = "aeiou"
 
+
 def generate_name():
     name = ""
     for _ in range(random.randint(2, 5)):
         name += random.choice(CONSONANTS)
-        name += random.choice(VOWELS) 
-    return name  
+        name += random.choice(VOWELS)
+    return name
 
 
 @slash.slash(
