@@ -71,7 +71,7 @@ async def disown(ctx):
 
 @slash.slash(
     name="info",
-    description="Find informmation on your Quib",
+    description="Find information on your Quib",
 )
 async def info(ctx):
     if os.path.exists(f"./quabbot/users/{ctx.author.id}.json"):
