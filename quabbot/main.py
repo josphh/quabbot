@@ -20,10 +20,10 @@ activity = discord.Game(name=f"v{__version__}")
 client = MyClient(activity=activity)
 slash = SlashCommand(client, sync_commands=True)
 
+CONSONANTS = "bcdfghjklmnpqrstvwxyz"
+VOWELS = "aeiou"
 
-def genName():
-    CONSONANTS = "bcdfghjklmnpqrstvwxyz"
-    VOWELS = "aeiou"
+def generate_name():
     name = ""
     for _ in range(random.randint(2, 5)):
         name += random.choice(CONSONANTS)
@@ -48,7 +48,7 @@ async def adopt(ctx):
         await ctx.send("You may not adopt another Quib, as you already have one!")
     else:
         with open(f"./quabbot/users/{ctx.author.id}.json", "w") as file:
-            name = genName()
+            name = generate_name()
             json.dump({"name": name}, file)
             await ctx.send(f"Quib adopted; Their name is {name}!")
 
