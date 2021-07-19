@@ -1,4 +1,3 @@
-import json
 import os
 import sys
 
@@ -36,7 +35,7 @@ async def adopt(ctx):
     if os.path.exists(f"./quabbot/users/{ctx.author.id}.json"):
         await ctx.send("You may not adopt another Quib, as you already have one!")
     else:
-        with open(f"./quabbot/users/{ctx.author.id}.json", "w") as userFile:
+        with open(f"./quabbot/users/{ctx.author.id}.json", "w"):
             await ctx.send("Quib adopted!")
 
 
