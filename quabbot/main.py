@@ -65,6 +65,21 @@ async def disown(ctx):
     else:
         await ctx.send("You may not disown a Quib, as you do not have one!")
 
+@slash.slash(
+    name="info",
+    description="Find informmation on your Quib",
+)
+async def info(ctx):
+    if os.path.exists(f"./quabbot/users/{ctx.author.id}.json"):
+        with open(f"./quabbot/users/{ctx.author.id}.json", "r") as file:
+            data = json.load(file)
+            name = data["name"]
+            embed = discord.Embed(title = name)
+            embed.set_image(url='https://raw.githubusercontent.com/josphh/quabbot/master/quabbot/resources/quib.png')
+            await ctx.send(embed=embed)
+    else:
+        await ctx.send("You may not find info on your Quib, as you do not have one!")
+
 
 def launch():
     try:
