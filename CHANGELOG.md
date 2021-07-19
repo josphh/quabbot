@@ -2,6 +2,12 @@
 
 <!--next-version-placeholder-->
 
+## v0.4.0 (2021-07-19)
+| Type | Change |
+| --- | --- |
+| :Sparkles: | Add random generation of Quib name (#23) :sparkles: ([`9293c42`](https://github.com/josphh/quabbot/commit/9293c42d83ccd82767cdd529bb9f9709b47b0d88)) |
+| Other | Beautify 9293c42d83ccd82767cdd529bb9f9709b47b0d88 :art:  ([`8fe23e2`](https://github.com/josphh/quabbot/commit/8fe23e219a85c704359b79bfe98ca8dbebe669f1))<br>Merge pull request #22 from josphh/quib-svg ([`67c5744`](https://github.com/josphh/quabbot/commit/67c57442d7030e28ea45c28884fe71280dcf471e))<br>Create quib image :bento: ([`187e9c1`](https://github.com/josphh/quabbot/commit/187e9c1757e62965c1013d3b77e9e9d5250fbf68))<br>Install Pylint on GitHub Actions (#21) :construction_worker: :recycle: ([`83f325b`](https://github.com/josphh/quabbot/commit/83f325b5d3d7fe76d436d99d18407274fdb6cd6e)) |
+
 ## v0.3.0 (2021-07-18)
 | Type | Change |
 | --- | --- |
