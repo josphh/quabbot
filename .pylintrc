@@ -11,4 +11,5 @@ disable=line-too-long,
 	trailing-newlines,
 	trailing-whitespace,
 	unexpected-line-ending-format,
-	unnecessary-semicolon
+	unnecessary-semicolon,
+	wrong-import-order
