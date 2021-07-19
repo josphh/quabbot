@@ -1,10 +1,10 @@
-import jsons
+import datetime
 import os
 import random
 import sys
-import datetime
 
 import discord
+import jsons
 from discord_slash import SlashCommand
 
 from quabbot import __version__
@@ -51,7 +51,9 @@ async def adopt(ctx):
     else:
         with open(f"./quabbot/users/{ctx.author.id}.json", "w") as file:
             name = generate_name()
-            file.write(jsons.dumps({"name": name, "timeCreated": datetime.datetime.now()}))
+            file.write(
+                jsons.dumps({"name": name, "timeCreated": datetime.datetime.now()})
+            )
             await ctx.send(f"Quib adopted; Their name is {name}!")
 
 
@@ -66,6 +68,7 @@ async def disown(ctx):
     else:
         await ctx.send("You may not disown a Quib, as you do not have one!")
 
+
 @slash.slash(
     name="info",
     description="Find informmation on your Quib",
@@ -75,8 +78,12 @@ async def info(ctx):
         with open(f"./quabbot/users/{ctx.author.id}.json", "r") as file:
             data = jsons.loads(file.read())
             name = data["name"]
-            embed = discord.Embed(title = name, description = data["timeCreated"].strftime("%m/%d/%Y"))
-            embed.set_image(url='https://raw.githubusercontent.com/josphh/quabbot/master/quabbot/resources/quib.png')
+            embed = discord.Embed(
+                title=name, description=data["timeCreated"].strftime("%m/%d/%Y")
+            )
+            embed.set_image(
+                url="https://raw.githubusercontent.com/josphh/quabbot/master/quabbot/resources/quib.png"
+            )
             await ctx.send(embed=embed)
     else:
         await ctx.send("You may not find info on your Quib, as you do not have one!")
