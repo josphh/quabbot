@@ -2,6 +2,12 @@
 
 <!--next-version-placeholder-->
 
+## v0.6.0 (2021-07-19)
+| Type | Change |
+| --- | --- |
+| :Sparkles: | Add /info command (#26) :sparkles: ([`5fa1ee0`](https://github.com/josphh/quabbot/commit/5fa1ee0c2b97b97e391f408257d079507cf5351d)) |
+| Other | Beautify 5fa1ee0c2b97b97e391f408257d079507cf5351d :art:  ([`64dd577`](https://github.com/josphh/quabbot/commit/64dd577f037ab05a6f9124e9a395f25069d69024)) |
+
 ## v0.5.0 (2021-07-19)
 | Type | Change |
 | --- | --- |
