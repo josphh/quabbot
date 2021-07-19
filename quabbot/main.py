@@ -1,5 +1,6 @@
 import os
 import sys
+import random
 
 import discord
 from discord_slash import SlashCommand
@@ -17,6 +18,15 @@ os.makedirs("./quabbot/users", exist_ok=True)
 activity = discord.Game(name=f"v{__version__}")
 client = MyClient(activity=activity)
 slash = SlashCommand(client, sync_commands=True)
+
+
+def genName():
+    CONSONANTS = "bcdfghjklmnpqrstvwxyz"
+    VOWELS = "aeiou"
+    name = ""
+    for _ in range(random.randint(2, 5)):
+        name += random.choice(CONSONANTS)
+        name += random.choice(VOWELS)
 
 
 @slash.slash(
