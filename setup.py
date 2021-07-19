@@ -31,6 +31,7 @@ setup(
     install_requires=[
         "discord.py >=1.2.5,<2",
         "discord-py-slash-command >2,<3",
+        "jsons >=1,<2",
     ],
     entry_points={
         "console_scripts": [
