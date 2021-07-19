@@ -1,6 +1,7 @@
 import os
 import sys
 import random
+import json
 
 import discord
 from discord_slash import SlashCommand
@@ -26,7 +27,8 @@ def genName():
     name = ""
     for _ in range(random.randint(2, 5)):
         name += random.choice(CONSONANTS)
-        name += random.choice(VOWELS)
+        name += random.choice(VOWELS) 
+    return name  
 
 
 @slash.slash(
@@ -45,7 +47,9 @@ async def adopt(ctx):
     if os.path.exists(f"./quabbot/users/{ctx.author.id}.json"):
         await ctx.send("You may not adopt another Quib, as you already have one!")
     else:
-        with open(f"./quabbot/users/{ctx.author.id}.json", "w"):
+        with open(f"./quabbot/users/{ctx.author.id}.json", "w") as file:
+            name = genName()
+            json.dump({"name": name}, file)
             await ctx.send("Quib adopted!")
 
 
