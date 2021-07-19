@@ -2,6 +2,7 @@ import json
 import os
 import random
 import sys
+import datetime
 
 import discord
 from discord_slash import SlashCommand
@@ -50,7 +51,7 @@ async def adopt(ctx):
     else:
         with open(f"./quabbot/users/{ctx.author.id}.json", "w") as file:
             name = generate_name()
-            json.dump({"name": name}, file)
+            json.dump({"name": name, "timestamp": datetime.datetime.now()}, file)
             await ctx.send(f"Quib adopted; Their name is {name}!")
 
 
@@ -74,7 +75,7 @@ async def info(ctx):
         with open(f"./quabbot/users/{ctx.author.id}.json", "r") as file:
             data = json.load(file)
             name = data["name"]
-            embed = discord.Embed(title = name)
+            embed = discord.Embed(title = name, description = 'stuff')
             embed.set_image(url='https://raw.githubusercontent.com/josphh/quabbot/master/quabbot/resources/quib.png')
             await ctx.send(embed=embed)
     else:
