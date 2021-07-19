@@ -2,6 +2,11 @@
 
 <!--next-version-placeholder-->
 
+## v0.5.0 (2021-07-19)
+| Type | Change |
+| --- | --- |
+| :Lipstick: | Make names start with a capital letter :lipstick: ([#25](https://github.com/josphh/quabbot/issues/25)) ([`8ee9ac3`](https://github.com/josphh/quabbot/commit/8ee9ac32f1d85fc5f1d8e3d38c6e88bdc0b8d7e1)) |
+
 ## v0.4.0 (2021-07-19)
 | Type | Change |
 | --- | --- |
