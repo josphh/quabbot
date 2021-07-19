@@ -2,6 +2,12 @@
 
 <!--next-version-placeholder-->
 
+## v0.6.1 (2021-07-19)
+| Type | Change |
+| --- | --- |
+| :Bug: | Swap month and day in /info :bug:  ([`2d36986`](https://github.com/josphh/quabbot/commit/2d369864feec1adcf81a95dce1ffe544f31f876b)) |
+| Other | Ignore wrong-import-order :wrench: :green_heart:  ([`6a98d4b`](https://github.com/josphh/quabbot/commit/6a98d4bfc0b20ea95b05b4ef0fa7a415ebc380e3)) |
+
 ## v0.6.0 (2021-07-19)
 | Type | Change |
 | --- | --- |
