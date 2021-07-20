@@ -2,6 +2,12 @@
 
 <!--next-version-placeholder-->
 
+## v0.7.0 (2021-07-20)
+| Type | Change |
+| --- | --- |
+| :Sparkles: | Added option for custom name (#33) :sparkles: ([`bea1813`](https://github.com/josphh/quabbot/commit/bea1813727363146be21f1184b8839c9365a44ca)) |
+| Other | Beautify bea1813727363146be21f1184b8839c9365a44ca :art:  ([`8544aba`](https://github.com/josphh/quabbot/commit/8544aba15143b6a0ca2f7525b3b2c04673328c75)) |
+
 ## v0.6.4 (2021-07-20)
 | Type | Change |
 | --- | --- |
