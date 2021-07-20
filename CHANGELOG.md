@@ -2,6 +2,11 @@
 
 <!--next-version-placeholder-->
 
+## v0.6.3 (2021-07-20)
+| Type | Change |
+| --- | --- |
+| :Speech_Balloon: | Added name of Quib to disown message :speech_balloon: ([#31](https://github.com/josphh/quabbot/issues/31)) ([`5794a9f`](https://github.com/josphh/quabbot/commit/5794a9f61bdb5468105ba5330520c5075a6c6485)) |
+
 ## v0.6.2 (2021-07-19)
 | Type | Change |
 | --- | --- |
