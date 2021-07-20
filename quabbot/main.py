@@ -102,6 +102,7 @@ async def info(ctx):
     else:
         await ctx.send("You may not find info on your Quib, as you do not have one!")
 
+
 @slash.slash(
     name="rename",
     description="Rename your Quib",
@@ -119,10 +120,9 @@ async def rename(ctx, name):
         data = jsons.loads(file.read())
     data["name"] = name
     with open(f"./quabbot/users/{ctx.author.id}.json", "w") as file:
-            file.write(
-                jsons.dumps(data)
-            )
+        file.write(jsons.dumps(data))
     await ctx.send(f"Quib renamed to {name}!")
+
 
 def launch():
     try:
