@@ -2,6 +2,12 @@
 
 <!--next-version-placeholder-->
 
+## v0.8.0 (2021-07-20)
+| Type | Change |
+| --- | --- |
+| :Sparkles: | Create command to allow renaming (#34) :sparkles: ([`4834de9`](https://github.com/josphh/quabbot/commit/4834de97eb75eb60effe81fdfff91766fe5ae214)) |
+| Other | Beautify 4834de97eb75eb60effe81fdfff91766fe5ae214 :art:  ([`f5096a7`](https://github.com/josphh/quabbot/commit/f5096a7796a464fa52b0da0cc29c387a11388ca0)) |
+
 ## v0.7.0 (2021-07-20)
 | Type | Change |
 | --- | --- |
