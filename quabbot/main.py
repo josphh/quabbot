@@ -6,6 +6,8 @@ import sys
 import discord
 import jsons
 from discord_slash import SlashCommand
+from discord_slash.utils.manage_commands import create_option
+from discord_slash.model import SlashCommandOptionType
 
 from quabbot import __version__
 
@@ -44,13 +46,22 @@ async def ping(ctx):
 @slash.slash(
     name="adopt",
     description="Adopt a Quib",
+    options=[
+        create_option(
+            name="name",
+            description="Choose a custom name for your Quib.",
+            option_type=SlashCommandOptionType.STRING,
+            required=False
+        )
+    ]
 )
-async def adopt(ctx):
+async def adopt(ctx, name=None):
     if os.path.exists(f"./quabbot/users/{ctx.author.id}.json"):
         await ctx.send("You may not adopt another Quib, as you already have one!")
     else:
         with open(f"./quabbot/users/{ctx.author.id}.json", "w") as file:
-            name = generate_name()
+            if not name:
+                name = generate_name()
             file.write(
                 jsons.dumps({"name": name, "timeCreated": datetime.datetime.now()})
             )
