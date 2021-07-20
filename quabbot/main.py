@@ -114,7 +114,7 @@ async def info(ctx):
         )
     ],
 )
-async def adopt(ctx, name):
+async def rename(ctx, name):
     with open(f"./quabbot/users/{ctx.author.id}.json", "r") as file:
         data = jsons.loads(file.read())
     data["name"] = name
