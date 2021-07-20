@@ -63,8 +63,11 @@ async def adopt(ctx):
 )
 async def disown(ctx):
     if os.path.exists(f"./quabbot/users/{ctx.author.id}.json"):
-        os.remove(f"./quabbot/users/{ctx.author.id}.json")
-        await ctx.send("Quib disowned.")
+        with open(f"./quabbot/users/{ctx.author.id}.json", "r") as file:
+            data = jsons.loads(file.read())
+            name = data["name"]
+            os.remove(f"./quabbot/users/{ctx.author.id}.json")
+            await ctx.send(f"You disowned {name}.")
     else:
         await ctx.send("You may not disown a Quib, as you do not have one!")
 
