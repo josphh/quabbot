@@ -2,6 +2,12 @@
 
 <!--next-version-placeholder-->
 
+## v0.6.4 (2021-07-20)
+| Type | Change |
+| --- | --- |
+| :Bug: | Close file before deleting it :bug: ([`aaa085f`](https://github.com/josphh/quabbot/commit/aaa085fadbb7fd3d43e86a10e965246f8711f632)) |
+| Other | Merge pull request #32 from josphh/fix-disown ([`484d3bb`](https://github.com/josphh/quabbot/commit/484d3bbc6c7846a5cdb47e2b1b32cb83c7146ddc)) |
+
 ## v0.6.3 (2021-07-20)
 | Type | Change |
 | --- | --- |
