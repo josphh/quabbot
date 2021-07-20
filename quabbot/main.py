@@ -6,8 +6,8 @@ import sys
 import discord
 import jsons
 from discord_slash import SlashCommand
-from discord_slash.utils.manage_commands import create_option
 from discord_slash.model import SlashCommandOptionType
+from discord_slash.utils.manage_commands import create_option
 
 from quabbot import __version__
 
@@ -51,9 +51,9 @@ async def ping(ctx):
             name="name",
             description="Choose a custom name for your Quib.",
             option_type=SlashCommandOptionType.STRING,
-            required=False
+            required=False,
         )
-    ]
+    ],
 )
 async def adopt(ctx, name=None):
     if os.path.exists(f"./quabbot/users/{ctx.author.id}.json"):
