@@ -66,8 +66,8 @@ async def disown(ctx):
         with open(f"./quabbot/users/{ctx.author.id}.json", "r") as file:
             data = jsons.loads(file.read())
             name = data["name"]
-            os.remove(f"./quabbot/users/{ctx.author.id}.json")
-            await ctx.send(f"You disowned {name}.")
+        os.remove(f"./quabbot/users/{ctx.author.id}.json")
+        await ctx.send(f"You disowned {name}.")
     else:
         await ctx.send("You may not disown a Quib, as you do not have one!")
 
