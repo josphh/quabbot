@@ -1,15 +1,6 @@
 [MESSAGES CONTROL]
-disable=line-too-long,
-	missing-final-newline,
-	missing-class-docstring,
+disable=missing-class-docstring,
 	missing-function-docstring,
 	missing-module-docstring,
-	mixed-line-endings,
-	multiple-statements,
-	superfluous-parens,
 	too-few-public-methods,
-	trailing-newlines,
-	trailing-whitespace,
-	unexpected-line-ending-format,
-	unnecessary-semicolon,
-	wrong-import-order
+	format
