@@ -38,13 +38,16 @@ def generate_name():
 def get_user_file(user):
     return f"./quabbot/users/{user.id}.json"
 
+
 def save_user_data(user, data):
     with open(get_user_file(user), "w") as user_file:
         user_file.write(jsons.dumps(data))
 
+
 def load_user_data(user):
     with open(get_user_file(user)) as user_file:
         return jsons.loads(user_file.read())
+
 
 def has_user_data(user):
     return os.path.exists(get_user_file(user))
@@ -76,7 +79,9 @@ async def adopt(ctx, name=None):
     else:
         if not name:
             name = generate_name()
-        save_user_data(ctx.author, {"name": name, "timeCreated": datetime.datetime.now()})
+        save_user_data(
+            ctx.author, {"name": name, "timeCreated": datetime.datetime.now()}
+        )
         await ctx.send(f"Quib adopted; Their name is {name}!")
 
 
