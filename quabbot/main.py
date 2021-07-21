@@ -35,6 +35,21 @@ def generate_name():
     return name.title()
 
 
+def get_user_file(user):
+    return f"./quabbot/users/{user.id}.json"
+
+def save_user_data(user, data):
+    with open(get_user_file(user), "w") as user_file:
+        user_file.write(jsons.dumps(data))
+
+def load_user_data(user):
+    with open(get_user_file(user)) as user_file:
+        return jsons.loads(user_file.read())
+
+def has_user_data(user):
+    return os.path.exists(get_user_file(user))
+
+
 @slash.slash(
     name="ping",
     description="Measure the latency of Quabbot's communication with Discord.",
@@ -56,16 +71,13 @@ async def ping(ctx):
     ],
 )
 async def adopt(ctx, name=None):
-    if os.path.exists(f"./quabbot/users/{ctx.author.id}.json"):
+    if has_user_data(ctx.author):
         await ctx.send("You may not adopt another Quib, as you already have one!")
     else:
-        with open(f"./quabbot/users/{ctx.author.id}.json", "w") as file:
-            if not name:
-                name = generate_name()
-            file.write(
-                jsons.dumps({"name": name, "timeCreated": datetime.datetime.now()})
-            )
-            await ctx.send(f"Quib adopted; Their name is {name}!")
+        if not name:
+            name = generate_name()
+        save_user_data(ctx.author, {"name": name, "timeCreated": datetime.datetime.now()})
+        await ctx.send(f"Quib adopted; Their name is {name}!")
 
 
 @slash.slash(
@@ -73,11 +85,10 @@ async def adopt(ctx, name=None):
     description="Disown your Quib",
 )
 async def disown(ctx):
-    if os.path.exists(f"./quabbot/users/{ctx.author.id}.json"):
-        with open(f"./quabbot/users/{ctx.author.id}.json", "r") as file:
-            data = jsons.loads(file.read())
-            name = data["name"]
-        os.remove(f"./quabbot/users/{ctx.author.id}.json")
+    if has_user_data(ctx.author):
+        data = load_user_data(ctx.author)
+        name = data["name"]
+        os.remove(get_user_file(ctx.author))
         await ctx.send(f"You disowned {name}.")
     else:
         await ctx.send("You may not disown a Quib, as you do not have one!")
@@ -88,17 +99,16 @@ async def disown(ctx):
     description="Find information on your Quib",
 )
 async def info(ctx):
-    if os.path.exists(f"./quabbot/users/{ctx.author.id}.json"):
-        with open(f"./quabbot/users/{ctx.author.id}.json", "r") as file:
-            data = jsons.loads(file.read())
-            name = data["name"]
-            embed = discord.Embed(
-                title=name, description=data["timeCreated"].strftime("%d/%m/%Y")
-            )
-            embed.set_image(
-                url="https://raw.githubusercontent.com/josphh/quabbot/master/quabbot/resources/quib.png"
-            )
-            await ctx.send(embed=embed)
+    if has_user_data(ctx.author):
+        data = load_user_data(ctx.author)
+        name = data["name"]
+        embed = discord.Embed(
+            title=name, description=data["timeCreated"].strftime("%d/%m/%Y")
+        )
+        embed.set_image(
+            url="https://raw.githubusercontent.com/josphh/quabbot/master/quabbot/resources/quib.png"
+        )
+        await ctx.send(embed=embed)
     else:
         await ctx.send("You may not find info on your Quib, as you do not have one!")
 
@@ -116,11 +126,9 @@ async def info(ctx):
     ],
 )
 async def rename(ctx, name):
-    with open(f"./quabbot/users/{ctx.author.id}.json", "r") as file:
-        data = jsons.loads(file.read())
+    data = load_user_data(ctx.author)
     data["name"] = name
-    with open(f"./quabbot/users/{ctx.author.id}.json", "w") as file:
-        file.write(jsons.dumps(data))
+    save_user_data(ctx.author, data)
     await ctx.send(f"Quib renamed to {name}!")
 
 
