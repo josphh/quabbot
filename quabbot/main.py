@@ -4,20 +4,19 @@ import random
 import sys
 
 import discord
-import jsons
 from discord_slash import SlashCommand
 from discord_slash.model import SlashCommandOptionType
 from discord_slash.utils.manage_commands import create_option
 
 from quabbot import __version__
+from quabbot.quib import generate_quib
+from quabbot.user_data import save_user_data, load_user_data, get_user_file, has_user_data, delete_user_files
 
 
 class MyClient(discord.Client):
     async def on_ready(self):
         print("Ready")
 
-
-os.makedirs("./quabbot/users", exist_ok=True)
 
 activity = discord.Game(name=f"v{__version__}")
 client = MyClient(activity=activity)
@@ -33,24 +32,6 @@ def generate_name():
         name += random.choice(CONSONANTS)
         name += random.choice(VOWELS)
     return name.title()
-
-
-def get_user_file(user):
-    return f"./quabbot/users/{user.id}.json"
-
-
-def save_user_data(user, data):
-    with open(get_user_file(user), "w") as user_file:
-        user_file.write(jsons.dumps(data))
-
-
-def load_user_data(user):
-    with open(get_user_file(user)) as user_file:
-        return jsons.loads(user_file.read())
-
-
-def has_user_data(user):
-    return os.path.exists(get_user_file(user))
 
 
 @slash.slash(
@@ -77,11 +58,13 @@ async def adopt(ctx, name=None):
     if has_user_data(ctx.author):
         await ctx.send("You may not adopt another Quib, as you already have one!")
     else:
+        await ctx.defer()
         if not name:
             name = generate_name()
         save_user_data(
             ctx.author, {"name": name, "timeCreated": datetime.datetime.now()}
         )
+        generate_quib(ctx.author)
         await ctx.send(f"Quib adopted; Their name is {name}!")
 
 
@@ -93,7 +76,7 @@ async def disown(ctx):
     if has_user_data(ctx.author):
         data = load_user_data(ctx.author)
         name = data["name"]
-        os.remove(get_user_file(ctx.author))
+        delete_user_files(ctx.author)
         await ctx.send(f"You disowned {name}.")
     else:
         await ctx.send("You may not disown a Quib, as you do not have one!")
@@ -110,10 +93,7 @@ async def info(ctx):
         embed = discord.Embed(
             title=name, description=data["timeCreated"].strftime("%d/%m/%Y")
         )
-        embed.set_image(
-            url="https://raw.githubusercontent.com/josphh/quabbot/master/quabbot/resources/quib.png"
-        )
-        await ctx.send(embed=embed)
+        await ctx.send(embed=embed, file=discord.File(get_user_file(ctx.author, "quib.png")))
     else:
         await ctx.send("You may not find info on your Quib, as you do not have one!")
 

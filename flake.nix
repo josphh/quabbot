@@ -14,7 +14,8 @@
         pkgs = nixpkgs.legacyPackages.${system};
         inherit (pkgs) fetchFromGitHub;
         inherit (pkgs.python3Packages)
-          buildPythonPackage buildPythonApplication fetchPypi aiohttp discordpy;
+          buildPythonPackage buildPythonApplication fetchPypi aiohttp discordpy
+          cairosvg;
 
         discord-py-slash-command = buildPythonPackage rec {
           pname = "discord-py-slash-command";
@@ -55,7 +56,8 @@
         packages.quabbot = buildPythonApplication rec {
           name = "quabbot";
           src = ./.;
-          propagatedBuildInputs = [ discord-py-slash-command discordpy jsons ];
+          propagatedBuildInputs =
+            [ discord-py-slash-command discordpy jsons cairosvg ];
         };
         defaultPackage = packages.quabbot;
 

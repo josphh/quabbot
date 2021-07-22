@@ -28,7 +28,9 @@ setup(
         "Source": "https://github.com/josphh/quabbot",
     },
     packages=find_packages(exclude=["docs", "tests"]),
+    package_data={"quabbot": ["resources/quib.svg"]},
     install_requires=[
+        "cairosvg >=2,<3",
         "discord.py >=1.2.5,<2",
         "discord-py-slash-command >2,<3",
         "jsons >=1,<2",
