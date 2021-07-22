@@ -57,5 +57,7 @@
 
         apps.quabbot = utils.lib.mkApp { drv = packages.quabbot; };
         defaultApp = apps.quabbot;
+
+        checks = packages;
       });
 }
