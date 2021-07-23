@@ -2,6 +2,12 @@
 
 <!--next-version-placeholder-->
 
+## v1.1.0 (2021-07-23)
+| Type | Change |
+| --- | --- |
+| :Sparkles: | Randomise stroke dashes :sparkles:  ([`c34baa3`](https://github.com/josphh/quabbot/commit/c34baa342d20d62eae91ad6445bffe2f80ada8f2)) |
+| Other | Merge pull request #43 from josphh/random-stroke ([`5b2ec20`](https://github.com/josphh/quabbot/commit/5b2ec20dbd6a5dab672550dc2fccd60c41ce06d1))<br>Remove unused os.path import :rotating_light:  ([`f28c046`](https://github.com/josphh/quabbot/commit/f28c04671355d33e22f14449fcfb4904a49bbb00))<br>Substitute colours using an f-string :recycle:  ([`3bf1f2f`](https://github.com/josphh/quabbot/commit/3bf1f2fce7a16b07639bfbf36dc2e17084c4c588)) |
+
 ## v1.0.0 (2021-07-23)
 | Type | Change |
 | --- | --- |
