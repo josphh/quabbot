@@ -10,7 +10,13 @@ from discord_slash.utils.manage_commands import create_option
 
 from quabbot import __version__
 from quabbot.quib import generate_quib
-from quabbot.user_data import save_user_data, load_user_data, get_user_file, has_user_data, delete_user_files
+from quabbot.user_data import (
+    delete_user_files,
+    get_user_file,
+    has_user_data,
+    load_user_data,
+    save_user_data,
+)
 
 
 class MyClient(discord.Client):
@@ -93,7 +99,9 @@ async def info(ctx):
         embed = discord.Embed(
             title=name, description=data["timeCreated"].strftime("%d/%m/%Y")
         )
-        await ctx.send(embed=embed, file=discord.File(get_user_file(ctx.author, "quib.png")))
+        await ctx.send(
+            embed=embed, file=discord.File(get_user_file(ctx.author, "quib.png"))
+        )
     else:
         await ctx.send("You may not find info on your Quib, as you do not have one!")
 
