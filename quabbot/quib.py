@@ -1,6 +1,5 @@
 import colorsys
 import random
-from os import path
 
 from cairosvg import svg2png
 
