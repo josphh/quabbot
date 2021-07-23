@@ -2,6 +2,13 @@
 
 <!--next-version-placeholder-->
 
+## v1.0.0 (2021-07-23)
+| Type | Change |
+| --- | --- |
+| Breaking | BREAKING CHANGE: User data is now stored in directories.  ([`8cb24f8`](https://github.com/josphh/quabbot/commit/8cb24f8cb8608a7821a38411e3d9a72c726fb2f9)) |
+| :Boom: | Give Quibs a random colour :sparkles: :boom: :heavy_plus_sign: ([`8cb24f8`](https://github.com/josphh/quabbot/commit/8cb24f8cb8608a7821a38411e3d9a72c726fb2f9)) |
+| Other | Beautify 9c1032fe0abab9b4f0f56d8dc3c1a1ef5d87bad3 :art:  ([`3ec3662`](https://github.com/josphh/quabbot/commit/3ec3662a8b6b97fbddc8ab1a98534eb1f64743c5))<br>Merge pull request #41 from josphh/random-colour ([`9c1032f`](https://github.com/josphh/quabbot/commit/9c1032fe0abab9b4f0f56d8dc3c1a1ef5d87bad3))<br>Merge pull request #40 from josphh/flake-compat ([`c232572`](https://github.com/josphh/quabbot/commit/c2325728bb7f290b57f2febd6d2c70d57d83cfc4))<br>Document how to use on Nix stable :memo:  ([`b09bec4`](https://github.com/josphh/quabbot/commit/b09bec48e668ce39575a8fe5b1f752a4e7d3dc1d))<br>Add flake-compat :hammer: ([`99c6037`](https://github.com/josphh/quabbot/commit/99c60376fe3053335faa44ab3ca8071a80e29260))<br>Merge pull request #39 from josphh/nix ([`e090f73`](https://github.com/josphh/quabbot/commit/e090f73d9d7d0010db6cbc43fb10002927357d9a))<br>Add Nix installation details to README.md :memo: ([`af47474`](https://github.com/josphh/quabbot/commit/af47474217dec30fc2a37b92633a8ea0ad2ab871))<br>Check flake on GitHub Actions :construction_worker:  ([`e62f3b2`](https://github.com/josphh/quabbot/commit/e62f3b27090aff4d8ce45af17b4c29d7a4a23a59))<br>Create Nix flake :hammer:  ([`f1ba54e`](https://github.com/josphh/quabbot/commit/f1ba54ee08a3c4b8503fbdc0dd268e8b6734c0dd))<br>Beautify d704a29c39d693f209018ca18dfd6d246d784f74 :art:  ([`630236d`](https://github.com/josphh/quabbot/commit/630236d120ab0b6cd95a285a73051090354ee08c))<br>Move save/load code into functions :recycle: ([#38](https://github.com/josphh/quabbot/issues/38)) ([`d704a29`](https://github.com/josphh/quabbot/commit/d704a29c39d693f209018ca18dfd6d246d784f74))<br>Pylint: ignore all format messages :wrench: :construction_worker:  ([`add4c7e`](https://github.com/josphh/quabbot/commit/add4c7ed7e5de290700421a87acd6d69e29e69cf)) |
+
 ## v0.8.0 (2021-07-20)
 | Type | Change |
 | --- | --- |
