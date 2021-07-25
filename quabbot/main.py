@@ -68,7 +68,7 @@ async def adopt(ctx, name=None):
         if not name:
             name = generate_name()
         save_user_data(
-            ctx.author, {"name": name, "timeCreated": datetime.datetime.now()}
+            ctx.author, {"originName":name, "name": name, "timeCreated": datetime.datetime.now()}
         )
         generate_quib(ctx.author)
         await ctx.send(f"Quib adopted; Their name is {name}!")
@@ -124,6 +124,17 @@ async def rename(ctx, name=None):
         name = generate_name()
     data["name"] = name
     save_user_data(ctx.author, data)
+    await ctx.send(f"Quib renamed to {name}!")
+
+@slash.slash(
+    name="originalname",
+    description="Rename your Quib to its Original name",
+)
+async def original_name(ctx):
+    data = load_user_data(ctx.author)
+    data["name"] = data["originName"]
+    save_user_data(ctx.author, data)
+    name = data["name"]
     await ctx.send(f"Quib renamed to {name}!")
 
 
