@@ -2,6 +2,12 @@
 
 <!--next-version-placeholder-->
 
+## v1.3.0 (2021-07-25)
+| Type | Change |
+| --- | --- |
+| :Sparkles: | Added rename to original name :sparkles:  ([`bdf5698`](https://github.com/josphh/quabbot/commit/bdf5698e1f581a7b2a8d98eb4e0f8aa89e0b79f2)) |
+| Other | Beautify 1347e34bdb2e005932a9f2f54e19e85e431f653a :art:  ([`1db8341`](https://github.com/josphh/quabbot/commit/1db83412aa70dab6c937686d5a0abac1d0d586ef))<br>Merge pull request #48 from josphh/original-name-change ([`1347e34`](https://github.com/josphh/quabbot/commit/1347e34bdb2e005932a9f2f54e19e85e431f653a))<br>Rename originName → original_name :rotating_light: ([`1c92a6a`](https://github.com/josphh/quabbot/commit/1c92a6a55e226faec5c6cd163ddf8c3cc93a5fdc)) |
+
 ## v1.2.0 (2021-07-25)
 | Type | Change |
 | --- | --- |
