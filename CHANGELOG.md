@@ -2,6 +2,12 @@
 
 <!--next-version-placeholder-->
 
+## v1.2.0 (2021-07-25)
+| Type | Change |
+| --- | --- |
+| :Sparkles: | Added random name generating for /rename :sparkles:  ([`bb302af`](https://github.com/josphh/quabbot/commit/bb302af5ce983fda359da788c9a4162614357c0b)) |
+| Other | Merge pull request #47 from josphh/rename-random ([`20a46e6`](https://github.com/josphh/quabbot/commit/20a46e6c23c27f95ec375fb48f2615cccb19bdde)) |
+
 ## v1.1.0 (2021-07-23)
 | Type | Change |
 | --- | --- |
