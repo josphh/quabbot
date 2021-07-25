@@ -130,7 +130,7 @@ async def rename(ctx, name=None):
     name="originalname",
     description="Rename your Quib to its Original name",
 )
-async def originName(ctx):
+async def original_name(ctx):
     data = load_user_data(ctx.author)
     data["name"] = data["originName"]
     save_user_data(ctx.author, data)
