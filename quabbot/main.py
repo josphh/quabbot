@@ -114,12 +114,14 @@ async def info(ctx):
             name="name",
             description="Choose a custom name for your Quib.",
             option_type=SlashCommandOptionType.STRING,
-            required=True,
+            required=False,
         )
     ],
 )
-async def rename(ctx, name):
+async def rename(ctx, name=None):
     data = load_user_data(ctx.author)
+    if not name:
+        name = generate_name()
     data["name"] = name
     save_user_data(ctx.author, data)
     await ctx.send(f"Quib renamed to {name}!")
